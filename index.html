@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vanilla JavaScript calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="result">
+      <p id="result-box">0</p>
+    </div>
+    <div class="buttons">
+      <button class="button action-btn" onclick="document.getElementById('result-box').innerHTML = 0;"> AC </button>
+      <button class="button action-btn" onclick="document.getElementById('result-box').innerHTML = document.getElementById('result-box').innerHTML.substr(0, document.getElementById('result-box').innerHTML.length - 1);"> Back </button>
+      <button class="button num-button  calc-action-btn" onclick="myFunc('%')"> % </button>
+      <button class="button num-button  calc-action-btn" onclick="myFunc('/')"> / </button>
+      
+      <button class="button action-btn" onclick="square()"> <span>X<sup>2</sup></span> </button>
+      <button class="button action-btn" onclick="cube()"> <span>X<sup>3</sup></span> </button>
+      <button class="button action-btn" onclick="power()"> ^ </button>
+      <button class="button action-btn" onclick="root()"> √ </button>
+
+      <button class="button num-button" onclick="myFunc(7)"> 7 </button>
+      <button class="button num-button" onclick="myFunc(8)"> 8 </button>
+      <button class="button num-button" onclick="myFunc(9)"> 9 </button>
+      <button class="button num-button calc-action-btn" onclick="myFunc('*')"> * </button>
+      
+      <button class="button num-button" onclick="myFunc(4)"> 4 </button>
+      <button class="button num-button" onclick="myFunc(5)"> 5 </button>
+      <button class="button num-button" onclick="myFunc(6)"> 6 </button>
+      <button class="button num-button calc-action-btn" onclick="myFunc('-')"> - </button>
+      
+      <button class="button num-button one" onclick="myFunc(1)"> 1 </button>
+      <button class="button num-button two" onclick="myFunc(2)"> 2 </button>
+      <button class="button num-button three" onclick="myFunc(3)"> 3 </button>
+      <button class="button num-button calc-action-btn" onclick="myFunc('+')"> + </button>
+      
+      <button class="button num-button zero" onclick="myFunc(0)"> 0 </button>
+      <button class="button num-button point" onclick="myFunc('.')"> . </button>
+      <button class="button calc-action-btn" onclick="calculate()"> = </button>
+    </div>
+
+  </div>
+  
+  <script type="text/javascript">
+      document.addEventListener("contextmenu", function(e){
+          e.preventDefault();
+      }, false);
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
